@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    background-color: rgb(6, 4, 23);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(36, 36, 52);
+    transition: 1s linear;
+}
+.container .box:first-child{
+    border-radius: 50%;
+}
+.container .box:last-child{
+    background-color: aqua;
+}
+.container .box:nth-child(2){
+    border-radius: 20px;
+}
+.container .box:nth-child(3):hover{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px yellowgreen,
+                0 0 20px yellowgreen,
+                0 0 40px yellowgreen,
+                0 0 60px yellowgreen,
+                0 0 80px yellowgreen,
+                0 0 100px yellowgreen;
+           
+}
+.container .box:nth-child(4):active{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px yellowgreen,
+                0 0 20px yellowgreen,
+                0 0 40px yellowgreen,
+                0 0 60px yellowgreen,
+                0 0 80px yellowgreen,
+                0 0 100px yellowgreen;
+           
+}
+
+@keyframes glow{
+    0%{
+        background-color: rgb(36, 36, 52);
+        box-shadow: none;
+    }
+    20%{
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 0 10px yellowgreen,
+                    0 0 20px yellowgreen,
+                    0 0 40px yellowgreen,
+                    0 0 60px yellowgreen,
+                    0 0 80px yellowgreen,
+                    0 0 100px yellowgreen;
+    }
+    50%{
+        background-color: rgb(36, 36, 52);
+        box-shadow: none;
+    }
+    70%{
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 0 10px rgb(255, 0, 0),
+                    0 0 20px rgb(255, 0, 0),
+                    0 0 40px rgb(255, 0, 0),
+                    0 0 60px rgb(255, 0, 0),
+                    0 0 80px rgb(255, 0, 0),
+                    0 0 100px rgb(252, 0, 0);
+    }
+    100%{
+        background-color: rgb(36, 36, 52);
+        box-shadow: none;
+    }
+}
+.container .box:nth-child(5){
+    animation: glow 2s linear infinite;
+}
